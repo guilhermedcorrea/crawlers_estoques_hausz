@@ -30,7 +30,7 @@ password = os.getenv('PWD')
 connection_url = URL.create(
     "mssql+pyodbc",
     username=f"{usuario}",
-    password=f"4PL1C4ÇAO_3STOQUF202#",
+    password=f"password",
     host=f"{Server}",
     database=f"{tabela}",
     query={
