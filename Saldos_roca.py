@@ -65,14 +65,16 @@ class Roca:
         self.dataatual = str(datetime.today().strftime('%Y-%m-%d %H:%M')).split()[0]
         self.path='http://estoque.incepa.com.br/ConsultaEstoque/Detalhe/'
         self.lista_dicts = []
+        self.usuario = ''
+        self.password = ''
 
 
     def login(self):
         usuario = self.driver.find_element(By.XPATH,"//input[@id='Login']")
-        usuario.send_keys('CLIENTE')
+        usuario.send_keys(self.usuario')
 
         senha = self.driver.find_element(By.XPATH,"//input[@id='Senha']")
-        senha.send_keys('INCEPA')
+        senha.send_keys(self.password)
         confirmar = self.driver.find_element(By.XPATH,"//input[@id='btnEntrar']").click()
 
 
