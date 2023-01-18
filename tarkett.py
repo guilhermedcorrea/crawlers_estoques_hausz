@@ -66,13 +66,13 @@ class Tarkett:
         
         try:
             usuario = self.driver.find_element(By.ID,"tbUsuario")
-            usuario.send_keys('araguaina@hausz.com.br')
+            usuario.send_keys(self.user)
         except:
             print("Usuario nao encontrado")
         
         try:
             senha = self.driver.find_element(By.ID,"tbSenha")
-            senha.send_keys('hausz')
+            senha.send_keys(self.password)
         except:
             print("Senha nao encontrada")
 
